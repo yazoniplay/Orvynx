@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Log in — Orvynx</title>
-<meta name="description" content="Log in to your Orvynx account.">
+<meta name="description" content="Log in to your Orvynx workspace.">
 
 <link rel="stylesheet" href="style.css">
 
@@ -12,7 +12,7 @@
         orvynx<span>.</span>
     </a>
 
-    <div class="auth-card">
+    <section class="auth-card">
 
         <div class="auth-header">
             <p class="eyebrow">WELCOME BACK</p>
@@ -24,48 +24,74 @@
             </p>
         </div>
 
-        <form id="loginForm">
+        <form id="loginForm" class="auth-form">
 
-            <label>
+            <label for="loginEmail">
                 Email
 
                 <input
                     type="email"
                     id="loginEmail"
+                    name="email"
+                    autocomplete="email"
                     placeholder="you@company.com"
                     required
                 >
             </label>
 
-            <label>
+            <label for="loginPassword">
                 Password
 
                 <input
                     type="password"
                     id="loginPassword"
-                    placeholder="Your password"
+                    name="password"
+                    autocomplete="current-password"
+                    placeholder="Enter your password"
                     required
                 >
             </label>
 
+            <div class="auth-options">
+                <span></span>
+
+                <a href="#" id="forgotPassword">
+                    Forgot password?
+                </a>
+            </div>
+
             <button type="submit" class="auth-submit">
-                Log in
+                <span>Log in</span>
                 <span>→</span>
             </button>
 
-            <p id="authMessage" class="auth-message"></p>
+            <p
+                id="authMessage"
+                class="auth-message"
+                aria-live="polite"
+            ></p>
 
         </form>
+
+        <div class="auth-divider">
+            <span>OR</span>
+        </div>
 
         <div class="auth-footer">
             Don't have an account?
             <a href="signup.html">Create one</a>
         </div>
 
-    </div>
+    </section>
+
+    <p class="auth-legal">
+        By continuing, you agree to Orvynx's terms and privacy policy.
+    </p>
 
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script src="auth.js"></script>
 
 </body>
