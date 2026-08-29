@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Create account — Orvynx</title>
+<meta name="description" content="Create your Orvynx account.">
+
+<link rel="stylesheet" href="style.css">
+
+</head><body class="auth-page"><main class="auth-container">
+
+    <a href="index.html" class="auth-logo">
+        orvynx<span>.</span>
+    </a>
+
+    <div class="auth-card">
+
+        <div class="auth-header">
+            <p class="eyebrow">GET STARTED</p>
+
+            <h1>Create account.</h1>
+
+            <p>
+                Start controlling your AI agents.
+            </p>
+        </div>
+
+        <form id="signupForm">
+
+            <label>
+                Name
+
+                <input
+                    type="text"
+                    id="signupName"
+                    placeholder="Your name"
+                    required
+                >
+            </label>
+
+            <label>
+                Email
+
+                <input
+                    type="email"
+                    id="signupEmail"
+                    placeholder="you@company.com"
+                    required
+                >
+            </label>
+
+            <label>
+                Password
+
+                <input
+                    type="password"
+                    id="signupPassword"
+                    placeholder="At least 8 characters"
+                    minlength="8"
+                    required
+                >
+            </label>
+
+            <button type="submit" class="auth-submit">
+                Create account
+                <span>→</span>
+            </button>
+
+            <p id="authMessage" class="auth-message"></p>
+
+        </form>
+
+        <div class="auth-footer">
+            Already have an account?
+            <a href="login.html">Log in</a>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="auth.js"></script>
+
+</body>
+</html>
